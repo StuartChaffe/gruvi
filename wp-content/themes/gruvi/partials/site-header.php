@@ -31,7 +31,7 @@
 			<?php wp_nav_menu( array('theme_location' => 'primary', 'container' => false, ) ); ?>
 		</nav>
 
-		<a href="" class="btn">Let's talk</a>
+		<a href="" class="btn hidemobile">let's talk</a>
 	</div>
 
 </header>

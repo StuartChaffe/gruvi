@@ -72,7 +72,7 @@
 	--spacing-xs: 16px;
 
 	--content-width: 782px;
-	--container-width: 1320px;
+	--container-width: 1200px;
 	--container-global: 1600px;
 
 	// --font-size: calc(1rem + 0.15vw);
@@ -93,11 +93,23 @@
 	--font-size-h4: 22px;
 	--font-size-h5: 1rem;
 
+	// @include mq(medium) {
+	// 	--font-size: calc(1rem + 0.3vw);
+	// 	--font-size-lead: calc(1.25rem + 0.3vw);
+	// 	--font-size-small: 14px;
+	// 	--font-size-h1: calc(1rem + 5vw);
+	// 	--font-size-h2: calc(1rem + 2.5vw);
+	// 	--font-size-h3: calc(1rem + 1.5vw);
+	// 	--font-size-h4: 22px;
+	// 	--font-size-h5: 1rem;
+	// }
+
 	@include mq(large) {
+		--font-size-small: 16px;
 		--font-size: 20px;
-		--font-size-lead: 24px;
-		--font-size-h1: 72px;
-		--font-size-h2: 42px;
+		--font-size-lead: 32px;
+		--font-size-h1: 96px;
+		--font-size-h2: 64px;
 		--font-size-h3: 32px;
 	}
 }
