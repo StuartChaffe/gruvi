@@ -25,7 +25,7 @@ require_once( get_template_directory() . '/lib/vendors.php' );
 require_once( get_template_directory() . '/lib/helpers.php' );
 
 // Environment indicator
-require_once( get_template_directory() . '/lib/env-indicator.php' );
+// require_once( get_template_directory() . '/lib/env-indicator.php' );
 
 // Register ACF blocks
 require_once( get_template_directory() . '/blocks/register.php' );

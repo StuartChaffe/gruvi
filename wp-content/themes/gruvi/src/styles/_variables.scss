@@ -1,36 +1,55 @@
+@font-face {
+	font-family: 'Gruvi';
+	src: url('../fonts/gruvi-light.otf');
+	src: url('../fonts/gruvi-light.otf') format('opentype'),
+		url('../fonts/gruvi-light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Gruvi';
+	src: url('../fonts/gruvi.otf');
+	src: url('../fonts/gruvi.otf') format('opentype'),
+		url('../fonts/gruvi.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Gruvi';
+	src: url('../fonts/gruvi-bold.otf');
+	src: url('../fonts/gruvi-bold.otf') format('opentype'),
+		url('../fonts/gruvi-bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Gruvi';
+	src: url('../fonts/gruvi-black.otf');
+	src: url('../fonts/gruvi-black.otf') format('opentype'),
+		url('../fonts/gruvi-black.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
 :root {
-	--body-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	--heading-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+	--body-family: 'Gruvi', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-	--font-size: calc(1rem + 0.15vw);
-	--font-size-lead: calc(1.2rem + 0.1vw);
-	--font-size-small: calc(0.9rem + 0.1vw);
-	--font-size-h1: calc(2rem + 0.2vw);
-	--font-size-h2: calc(1.8rem + 0.2vw);
-	--font-size-h3: calc(1.5rem + 0.2vw);
-	--font-size-h4: calc(1.3rem + 0.2vw);
-	--font-size-h5: calc(1.2rem + 0.2vw);
-
-	--font-weight-light: 100;
+	--font-weight-light: 300;
 	--font-weight-normal: 400;
-	--font-weight-semi: 600;
 	--font-weight-bold: 700;
-	--font-weight-heavy: 900;
+	--font-weight-black: 900;
 
 	--line-height: 1.5;
 	--line-height-headings: 1.2;
 
-	--color-grey-dark: #6a6a6a;
-	--color-grey: #ddd;
+	--color-grey-dark: #1B1B1B;
+	--color-grey: #808080;
 	--color-grey-light: #efefef;
 
-	--color-primary: #59BACC;
-	--color-secondary: #58AD69;
-	--color-tertiary: #FFBC49;
-	--color-quaternary: #E2574C;
+	--color-primary: #0029FF;
+	--color-secondary: var(--color-grey-dark);
 
-	--color-text-base: #333;
-	--color-text-dark: #181822;
+	--color-text-base: #fff;
+	--color-text-dark: #fff;
 	--color-text-reversed: #fff;
 	--color-text-link: #0087D0;
 	--color-text-hover: #003451;
@@ -41,26 +60,44 @@
 	--color-youtube: #cc181e;
 	--color-linkedin: #0077B5;
 
-	--body-background-color: #fff;
+	--body-background-color: #000;
 
 	--border-radius: 16px;
 
-	--spacing-xxl: 3em;
-	--spacing-xl: 2em;
-	--spacing-l: 1.5em;
-	--spacing: 1em;
-	--spacing-s: 0.5em;
-	--spacing-xs: 0.25em;
+	--spacing-xxl: 175px;
+	--spacing-xl: 128px;
+	--spacing-l: 96px;
+	--spacing: 64px;
+	--spacing-s: 32px;
+	--spacing-xs: 16px;
 
-	--container-width: 75rem;
-	--container-width-l: 100rem;
-	--content-width: 50rem;
+	--content-width: 782px;
+	--container-width: 1320px;
+	--container-global: 1600px;
+
+	// --font-size: calc(1rem + 0.15vw);
+	// --font-size-lead: calc(1.2rem + 0.1vw);
+	// --font-size-small: calc(0.9rem + 0.1vw);
+	// --font-size-h1: calc(2rem + 0.2vw);
+	// --font-size-h2: calc(1.8rem + 0.2vw);
+	// --font-size-h3: calc(1.5rem + 0.2vw);
+	// --font-size-h4: calc(1.3rem + 0.2vw);
+	// --font-size-h5: calc(1.2rem + 0.2vw);
+
+	--font-size: calc(1rem + 0.3vw);
+	--font-size-lead: calc(1.25rem + 0.3vw);
+	--font-size-small: 14px;
+	--font-size-h1: calc(1rem + 5vw);
+	--font-size-h2: calc(1rem + 2.5vw);
+	--font-size-h3: calc(1rem + 1.5vw);
+	--font-size-h4: 22px;
+	--font-size-h5: 1rem;
 
 	@include mq(large) {
-		--font-size-h1: calc(3.2rem + 0.2vw);
-		--font-size-h2: calc(2rem + 0.2vw);
-		--font-size-h3: calc(1.6rem + 0.2vw);
-		--font-size-h4: calc(1.4rem + 0.2vw);
-		--font-size-h5: calc(1.2rem + 0.2vw);
+		--font-size: 20px;
+		--font-size-lead: 24px;
+		--font-size-h1: 72px;
+		--font-size-h2: 42px;
+		--font-size-h3: 32px;
 	}
 }

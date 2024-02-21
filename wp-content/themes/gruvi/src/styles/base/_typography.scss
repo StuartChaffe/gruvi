@@ -1,10 +1,23 @@
 p {
-	margin-top: var(--spacing-l);
-	margin-bottom: 0;
+	margin-top: 0;
+	margin-bottom: var(--spacing-s);
+	font-size: var(--font-size);
+	&:last-of-type {
+		margin-bottom: 0;
+	}
 }
-
-p.lead {
-	font-size: var(--font-size-lead);
+p.lead, .has-large-font-size {
+	font-size: 18px;
+	font-weight: var(--font-weight-normal);
+	@include mq(medium) {
+		font-size: var(--font-size-lead);
+	}
+}
+p.small, .small p, .small, .has-small-font-size {
+	font-size: var(--font-size-small);
+}
+strong {
+	font-weight: var(--font-weight-bold);
 }
 
 ul,
@@ -48,10 +61,15 @@ h3,
 h4,
 h5 {
 	margin: 0;
-    font-family: var(--heading-family);
+	text-transform: uppercase;
+	font-family: var(--body-family);
 	line-height: var(--line-height-headings);
-	font-weight: var(--font-weight-bold);
+	font-weight: var(--font-weight-normal);
 	color: var(--heading-color);
+
+	strong {
+		font-weight: var(--font-weight-black);
+	}
 }
 
 h1, .heading-1 { font-size: var(--font-size-h1); }
@@ -76,4 +94,13 @@ pre {
 	overflow: auto;
 	width: calc(96vw - 2em);
 	line-height: 1.3;
+}
+hr,
+.wp-block-separator {
+	background-image: url(../../src/images/hr-bkg.png);
+	background-repeat: repeat-x;
+	height: 8px;
+	max-width: 100%;
+	border: 0;
+	margin: var(--spacing-l) 0;
 }

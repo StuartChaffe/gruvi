@@ -1,6 +1,8 @@
 .site-header {
 	display: flex;
 	justify-content: space-between;
+	z-index: 999;
+	background-color: red;
 }
 
 .site-header__inner {
@@ -13,24 +15,100 @@
 }
 
 .site-header__logo {
-	font-size: 2rem;
 	margin: 0;
+	width: 220px;
+	z-index: 9999;
 }
 
 .site-header__nav {
 	display: none;
 
 	@include mq(medium) {
-		display: block;
+		display: flex;
+		align-items: center;
+		height: 100%;
 	}
-}
+	ul {
+		display: flex;
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		align-items: center;
+		.current_page_item > a {
+			font-weight: var(--font-weight-black);
+			// color: var(--color-primary);
+			// &:hover {
+			// 	color: var(--color-primary);
+			// }
+		}
+		li {
+			position: relative;
+			display: flex;
+			// justify-content: center;
+			height: 100%;
+			// margin-left: 1rem;
 
-.site-header__nav ul {
-	display: flex;
-}
+			a {
+				display: flex;
+				align-items: center;
+				color: white;
+				// padding: 1.5rem 1rem;
+				margin: 0 1rem;
+				// font-weight: var(--font-weight-medium);
+				transition: .2s ease;
+				&:hover {
+					text-decoration: none;
+					color: var(--color-text-base);
+					transition: .2s ease;
+				}
+			}
+			&:last-child {
+				a {
+					margin-right: 0;
+				}
+			}
+			.sub-menu {
+				background-color: var(--color-grey);
+				z-index: 5;
+				display: flex;
+				flex-direction: column;
+				align-items: baseline;
+				margin-bottom: 1rem;
+				padding: 1rem 0;
+				border: 0;
+				border-bottom-left-radius: 10px;
+				border-bottom-right-radius: 10px;
+				height: auto;
+				top: 100%;
+				// box-shadow: 0 20px 20px 0px rgba(0, 0, 0, 0.2);
 
-.site-header__nav li {
-	margin-left: 1rem;
+				@include mq(medium) {
+					margin: 0 1rem;
+					position: absolute;
+					transform: translateY(10px);
+					opacity: 0;
+					visibility: hidden;
+					transition: .2s ease;
+					margin: 0;
+					background-color: var(--color-grey);
+					min-width: 270px
+				}
+				.current_page_item a {
+					color: var(--color-primary);
+				}
+				li {
+					width: 100%;
+					a {
+						width: 100%;
+						padding: 0.5rem 1rem;
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 .site-header__menu-btn {
