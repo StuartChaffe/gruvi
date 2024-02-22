@@ -9,6 +9,15 @@ jQuery(document).ready(function( $ ) {
 			$(this).removeClass('animate--visible');
 		}
 	});
+	$('.fade').each(function(){
+		var ImageHeight = $(window).height() -50;
+		if($(document).scrollTop() >= $(this).offset().top - ImageHeight) {
+		$(this).addClass('fade--visible');
+		// $('h1').addClass('animate--visible');
+		} else {
+			$(this).removeClass('fade--visible');
+		}
+	});
   };
   ImageAnimation();
   $(document).scroll(function(){

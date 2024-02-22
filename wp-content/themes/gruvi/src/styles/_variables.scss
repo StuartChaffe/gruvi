@@ -38,7 +38,7 @@
 	--font-weight-bold: 700;
 	--font-weight-black: 900;
 
-	--line-height: 1.5;
+	--line-height: 1.2;
 	--line-height-headings: 1.2;
 
 	--color-grey-dark: #1B1B1B;
@@ -60,7 +60,7 @@
 	--color-youtube: #cc181e;
 	--color-linkedin: #0077B5;
 
-	--body-background-color: #000;
+	--body-background-color: var(--color-grey-dark);
 
 	--border-radius: 16px;
 
@@ -72,7 +72,7 @@
 	--spacing-xs: 16px;
 
 	--content-width: 782px;
-	--container-width: 1200px;
+	--container-width: 1250px;
 	--container-global: 1600px;
 
 	// --font-size: calc(1rem + 0.15vw);
@@ -106,7 +106,7 @@
 
 	@include mq(large) {
 		--font-size-small: 16px;
-		--font-size: 20px;
+		--font-size: 24px;
 		--font-size-lead: 32px;
 		--font-size-h1: 96px;
 		--font-size-h2: 64px;

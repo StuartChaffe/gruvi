@@ -23,7 +23,7 @@
 }
 
 .btn--border {
-	background-color: transparent;
+	background-color: var(--color-grey-dark);
 	border: 1px solid var(--color-primary);
 	color: var(--color-primary);
 
@@ -36,15 +36,36 @@
 .btn--large {
 	padding: 0.4rem 1rem 0 1rem;
 	font-size: var(--font-size-lead);
+	font-weight: var(--font-weight-normal);
 }
 .btn--circle {
 	display: flex;
-	border-radius: 100%;
 	align-items: center;
 	justify-content: center;
+	text-align: center;
+	padding: 0.25rem 1rem 0 1rem;
+	font-size: var(--font-size-small);
 	// padding: 0.5rem;
 	width: 150px;
 	height: 150px;
+	border-radius: 100%;
 	background-color: var(--color-grey-dark);
 	border: 1px solid rgba(255,255,255, 0.5);
+	color: white;
+	transition: all 0.1s ease-in-out;
+	&:hover, &:focus {
+		background-color: var(--color-primary);
+		color: white;
+		text-decoration: none;
+		transition: all 0.1s ease-in-out;
+	}
+	&-large {
+		width: 200px;
+		height: 200px;
+	}
+}
+
+.btn__group {
+	display: flex;
+	margin-top: 0;
 }

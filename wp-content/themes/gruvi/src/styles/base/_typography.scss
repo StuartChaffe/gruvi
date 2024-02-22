@@ -66,15 +66,19 @@ h5 {
 	text-transform: uppercase;
 	font-family: var(--body-family);
 	line-height: var(--line-height-headings);
-	font-weight: var(--font-weight-normal);
+	font-weight: var(--font-weight-light);
 	color: var(--heading-color);
 
+	strong {
+		font-weight: var(--font-weight-bold);
+	}
+}
+
+h1, .heading-1 { font-size: var(--font-size-h1); font-weight: var(--font-weight-light);
 	strong {
 		font-weight: var(--font-weight-black);
 	}
 }
-
-h1, .heading-1 { font-size: var(--font-size-h1); font-weight: var(--font-weight-light); }
 h2, .heading-2 { font-size: var(--font-size-h2); }
 h3, .heading-3 { font-size: var(--font-size-h3); }
 h4, .heading-4 { font-size: var(--font-size-h4); }
