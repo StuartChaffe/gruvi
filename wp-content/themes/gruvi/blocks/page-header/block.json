@@ -1,0 +1,13 @@
+{
+	"name": "acf/page-header",
+	"title": "Page header",
+	"description": "A page header",
+	"category": "gruvi",
+	"icon": "format-image",
+	"keywords": ["banner, hero"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "page-header.php"
+	},
+	"align": "full"
+}
