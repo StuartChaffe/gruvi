@@ -1,4 +1,5 @@
 p {
+	@extend .animate !optional;
 	margin-top: 0;
 	margin-bottom: var(--spacing-s);
 	font-size: var(--font-size);
@@ -60,6 +61,7 @@ h2,
 h3,
 h4,
 h5 {
+	@extend .animate !optional;
 	margin: 0;
 	text-transform: uppercase;
 	font-family: var(--body-family);
