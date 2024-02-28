@@ -1,0 +1,13 @@
+{
+	"name": "acf/video",
+	"title": "Gruvi Video",
+	"description": "A video block",
+	"category": "gruvi",
+	"icon": "format-video",
+	"keywords": ["video"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "video.php"
+	},
+	"align": "full"
+}

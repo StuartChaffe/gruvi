@@ -3,7 +3,7 @@
 	.animate {
 		@include mq(medium) {
 			opacity: 0;
-			transform: translateY(200px);
+			transform: translateY(150px);
 			// transition: all 1s ease-in-out;
 			transition: opacity 1s linear, transform 1s ease-in-out;
 		}
@@ -15,14 +15,13 @@
 		}
 	}
 	.animated {
-		background-color: red;
-		.animate.animate--visible:nth-of-type(2) {
+		> .animate.animate--visible:nth-of-type(2) {
 			transition-delay: .2s;
 		}
-		.animate.animate--visible:nth-of-type(3) {
+		> .animate.animate--visible:nth-of-type(3) {
 			transition-delay: .4s;
 		}
-		.animate.animate--visible:nth-of-type(4) {
+		> .animate.animate--visible:nth-of-type(4) {
 			transition-delay: .6s;
 		}
 	}
@@ -36,5 +35,23 @@
 .fade--visible {
 	@include mq(medium) {
 		opacity: 1;
+	}
+}
+
+.across {
+	@include mq(medium) {
+		opacity: 0;
+		width: 0;
+		left: 50%;
+		transform: translateY(150px);
+		transition: all 1s ease-in-out;
+	}
+}
+.across--visible {
+	@include mq(medium) {
+		opacity: 1;
+		width: 100%;
+		left: 0;
+		transform: translateY(0);
 	}
 }

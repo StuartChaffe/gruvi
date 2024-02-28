@@ -1,0 +1,13 @@
+{
+	"name": "acf/grid",
+	"title": "Grid block",
+	"description": "A grid with links",
+	"category": "gruvi",
+	"icon": "dashicons-layout",
+	"keywords": ["links, grid"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "grid.php"
+	},
+	"align": "full"
+}

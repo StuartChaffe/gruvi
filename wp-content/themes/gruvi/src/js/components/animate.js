@@ -1,7 +1,7 @@
 jQuery(document).ready(function( $ ) {
 	function ImageAnimation() {
-	$('.animate, h1, h2, h3, h4, h5, p').each(function(){
-		var ImageHeight = $(window).height() -50;
+	$('.animate, h1, h2, h3, h4, h5, p, .wp-block-buttons').each(function(){
+		var ImageHeight = $(window).height() -20;
 		if($(document).scrollTop() >= $(this).offset().top - ImageHeight) {
 		$(this).addClass('animate--visible');
 		// $('h1').addClass('animate--visible');
@@ -10,7 +10,7 @@ jQuery(document).ready(function( $ ) {
 		}
 	});
 	$('.fade').each(function(){
-		var ImageHeight = $(window).height() -50;
+		var ImageHeight = $(window).height() -20;
 		if($(document).scrollTop() >= $(this).offset().top - ImageHeight) {
 		$(this).addClass('fade--visible');
 		// $('h1').addClass('animate--visible');
@@ -18,26 +18,19 @@ jQuery(document).ready(function( $ ) {
 			$(this).removeClass('fade--visible');
 		}
 	});
+	$('.across, .wp-block-separator').each(function(){
+		var ImageHeight = $(window).height() -20;
+		if($(document).scrollTop() >= $(this).offset().top - ImageHeight) {
+		$(this).addClass('across--visible');
+		// $('h1').addClass('animate--visible');
+		} else {
+			$(this).removeClass('across--visible');
+		}
+	});
   };
   ImageAnimation();
   $(document).scroll(function(){
 	ImageAnimation();
   });
+  $(this).parent().prev().get(0).play();
 });
-// function reveal() {
-// 	var reveals = document.querySelectorAll(".animate");
-
-// 	for (var i = 0; i < reveals.length; i++) {
-// 	  var windowHeight = window.innerHeight;
-// 	  var elementTop = reveals[i].getBoundingClientRect().top;
-// 	  var elementVisible = 150;
-
-// 	  if (elementTop < windowHeight - elementVisible) {
-// 		reveals[i].classList.add("animate--visible");
-// 	  } else {
-// 		reveals[i].classList.remove("animate--visible");
-// 	  }
-// 	}
-//   }
-
-//   window.addEventListener("scroll", reveal);

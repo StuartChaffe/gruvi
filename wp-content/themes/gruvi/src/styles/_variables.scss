@@ -5,6 +5,7 @@
 		url('../fonts/gruvi-light.ttf') format('truetype');
 	font-weight: 300;
 	font-style: normal;
+	// ascent-override: 100%;
 }
 @font-face {
 	font-family: 'Gruvi';
@@ -111,5 +112,6 @@
 		--font-size-h1: 96px;
 		--font-size-h2: 64px;
 		--font-size-h3: 32px;
+		--font-size-h4: 24px;
 	}
 }

@@ -1,0 +1,129 @@
+.grid {
+	&--block {
+
+	}
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	gap: 20px;
+	color: white;
+	@include mq(medium) {
+		grid-template-columns: repeat(10, 1fr);
+		grid-auto-rows: 1fr;
+	}
+
+	a {
+		color: white;
+	}
+
+	&-item {
+		position: relative;
+		border: 1px solid white;
+		background-color: rgba(255, 255, 255, 0);
+		display: flex;
+		flex-direction: column;
+		padding: var(--spacing-s);
+		padding-bottom: 24px;
+		transition: background-color .2s ease-in !important;
+
+		.arrow {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 36px;
+			width: 36px;
+			height: 36px;
+			bottom: 24px;
+			right: 24px;
+			background-color: var(--color-primary);
+			color: white;
+			transition: all .2s ease-in !important;
+		}
+
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.1);
+			transition: all .2s ease-in !important;
+			text-decoration: none;
+			// transform: scale(1.02,1.02);
+			.arrow {
+				color: var(--color-primary);
+				background-color: white;
+				transition: all .2s ease-in !important;
+			}
+			img {
+				opacity: 1;
+				transition: opacity .2s ease-in !important;
+			}
+		}
+
+		h4 {
+			margin-bottom: var(--spacing);
+		}
+
+		h4,
+		p {
+			opacity: 1;
+			transform: translateY(0px);
+		}
+		p {
+			width: calc(100% - 40px);
+			margin-top: auto;
+		}
+
+		img {
+			position: absolute;
+			top: var(--spacing-s);
+			right: var(--spacing-s);
+			width: 95px;
+			opacity: 0;
+			transition: opacity .2s ease-in !important;
+		}
+
+		&:nth-child(1) {
+			@include mq(medium) {
+				grid-column-start: 1;
+				grid-column-end: 4;
+				grid-row-start: 1;
+				grid-row-end: 3;
+
+				img {
+					position: relative;
+					margin-top: auto;
+					top: auto;
+					right: auto;
+				}
+				p {
+					margin-top: var(--spacing-s);
+				}
+			}
+		}
+		&:nth-child(2) {
+			@include mq(medium) {
+				grid-column-start: 4;
+				grid-column-end: 11;
+				grid-row-start: 1;
+				grid-row-end: 1;
+				p {
+					width: 50%;
+				}
+			}
+		}
+		&:nth-child(3) {
+			@include mq(medium) {
+				grid-column-start: 4;
+				grid-column-end: 8;
+				grid-row-start: 2;
+				grid-row-end: 2;
+			}
+		}
+		&:nth-child(4) {
+			@include mq(medium) {
+				grid-column-start: 8;
+				grid-column-end: 11;
+				grid-row-start: 2;
+				grid-row-end: 2;
+			}
+		}
+	}
+}

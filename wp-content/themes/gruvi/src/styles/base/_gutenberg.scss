@@ -99,3 +99,10 @@ div[data-type="core/button"] div[data-block] {
 .editor-styles-wrapper .has-large-font-size {
 	font-size: var(--font-size-lead) !important;
 }
+h2, .heading-2, h2.has-medium-font-size { font-size: var(--font-size-h2) !important;}
+h2.has-large-font-size {
+	font-size: var(--font-size-h1) !important;
+}
+h2.has-small-font-size {
+	font-size: var(--font-size-h3) !important;
+}
