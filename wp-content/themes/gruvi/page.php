@@ -46,6 +46,13 @@
 
 		<h4><strong>Account Management</strong></h4>
 		<p>The French Riviera presented itself at its best for this year's ÖTILLÖ Swimrun Cannes. Very warm and sunny weather, the biggest field in ÖTILLÖ history with almost 800 participants from 38 nations and a challenging and varied course through and around the beautiful City of Cannes made for the perfect finale to the 2023 ÖTILLÖ Swimrun World Series season.</p>
+
+		<div class="spacer size-1 animate animate--visible"><p class="small">Spacer size 1</p></div>
+		<div class="spacer size-2 animate animate--visible"><p class="small">Spacer size 2</p></div>
+		<div class="spacer size-3 animate animate--visible"><p class="small">Spacer size 3</p></div>
+		<div class="spacer size-4 animate animate--visible"><p class="small">Spacer size 4</p></div>
+		<div class="spacer size-5 animate animate--visible"><p class="small">Spacer size 5</p></div>
+		<div class="spacer size-6 animate animate--visible"><p class="small">Spacer size 6</p></div>
 	</section>
 </main>
 <?php endwhile; ?>

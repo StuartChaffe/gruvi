@@ -1,7 +1,7 @@
 <?php
 $type = get_field('bkg_type');
 // $size = get_field('size');
-$allowed_blocks = array( 'core/heading', 'core/paragraph', 'core/buttons');
+$allowed_blocks = array( 'core/heading', 'core/paragraph', 'core/buttons', 'acf/spacer');
 $image = get_field('image');
 $mobile_image = get_field('mobile_image');
 $video = get_field('video');

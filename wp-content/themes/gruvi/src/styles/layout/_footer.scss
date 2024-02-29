@@ -1,19 +1,86 @@
 .site-footer {
-	margin-top: auto;
-	text-align: center;
-	background-color: var(--color-primary);
-	padding: var(--spacing);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: var(--spacing-l);
+
+	&__logo {
+		display: block;
+		width: 400px;
+		height: 60px;
+		margin-bottom: var(--spacing-s);
+	}
+	&__nav {
+		margin-bottom: var(--spacing);
+		@include mq(medium) {
+			display: flex;
+			align-items: center;
+			height: 100%;
+		}
+		ul {
+			display: flex;
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			align-items: center;
+			.current_page_item > a {
+				font-weight: var(--font-weight-black);
+			}
+			li {
+				position: relative;
+				display: flex;
+				margin: 0 0.5rem;
+
+				a {
+					position: relative;
+					color: white;
+					font-size: var(--font-size-small);
+					transition: .2s ease;
+					&::after {
+						content: '';
+						display: block;
+						width: 100%;
+						height: 2px;
+						background-color: transparent;
+					}
+					&:hover {
+						text-decoration: none;
+						color: var(--color-text-base);
+						transition: .2s ease;
+						&::after {
+							content: '';
+							display: block;
+							width: 100%;
+							height: 2px;
+							background-color: var(--color-primary);
+						}
+					}
+				}
+				&:last-child {
+					a {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
 }
 
 .site-footer__inner {
-	@extend .container;
+	background-image: url('../../src/images/footer-bkg.svg');
+	background-position: top center;
+    background-size: cover;
+	border-top: 2px solid white;
+	width: 100%;
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+	padding: var(--spacing-s) 0;
 }
 
 .site-footer p {
 	color: white;
 	margin: 0;
-	font-size: var(--font-size-small);
+	margin-bottom: var(--spacing);
 }

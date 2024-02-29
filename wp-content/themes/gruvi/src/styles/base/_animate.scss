@@ -3,7 +3,7 @@
 	.animate {
 		@include mq(medium) {
 			opacity: 0;
-			transform: translateY(150px);
+			transform: translateY(250px);
 			// transition: all 1s ease-in-out;
 			transition: opacity 1s linear, transform 1s ease-in-out;
 		}

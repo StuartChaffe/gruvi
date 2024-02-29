@@ -16,6 +16,12 @@
 	padding: 0 1rem;
 	width: 100%;
 	max-width: var(--container-width);
+	@include mq(medium) {
+		padding: 0 var(--spacing-s);
+	}
+	// @include mq(large) {
+	// 	padding: 0 var(--spacing);
+	// }
 }
 
 .main {

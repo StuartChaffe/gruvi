@@ -1,0 +1,13 @@
+{
+	"name": "acf/spacer",
+	"title": "Gruvi spacer",
+	"description": "A spacer",
+	"category": "gruvi",
+	"icon": "admin-settings",
+	"keywords": ["spacer"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "spacer.php"
+	},
+	"align": "full"
+}

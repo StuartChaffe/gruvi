@@ -1,16 +1,16 @@
 <?php
-// $video = get_field('video');
-// $poster = get_field('poster');
-// $options = get_field('options');
-// $id = get_field('id');
+$block1 = get_field('block_1');
+$block2 = get_field('block_2');
+$block3 = get_field('block_3');
+$block4 = get_field('block_4');
 ?>
 
 <section class="grid--block">
 	<div class="grid container animate">
-		<a href="" class="grid-item">
-			<h4><strong>audience behaviour</strong></h4>
-			<img src="<?php echo get_template_directory_uri(); ?>/src/images/cost-estimation.png" alt="" />
-			<p>Analyses audiences, their interest and behaviour</p>
+		<a href="<?php if($block1['link']): ?><?php echo $block1['link']['url']; ?><?php endif; ?>" class="grid-item">
+			<?php if($block1['title']): ?><h4><strong><?php echo $block1['title']; ?></strong></h4><?php endif; ?>
+			<?php if($block1['image']): ?><img src="<?php echo $block1['image']['url']; ?>" alt="<?php echo $block1['image']['alt']; ?>" /><?php endif; ?>
+			<?php if($block1['content']): ?><p><?php echo $block1['content']; ?></p><?php endif; ?>
 			<div class="arrow"><svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 					<g transform="translate(-9, -9)" fill="currentColor" fill-rule="nonzero">
@@ -19,10 +19,10 @@
 				</g>
 			</svg></div>
 		</a>
-		<a href="" class="grid-item">
-			<h4><strong>cost estimation</strong></h4>
-			<p>Calculates cost, forecasts engagement, ticketing demand and return on advertising spend</p>
-			<img src="<?php echo get_template_directory_uri(); ?>/src/images/cost-estimation.png" alt="" />
+		<a href="<?php if($block2['link']): ?><?php echo $block2['link']['url']; ?><?php endif; ?>" class="grid-item">
+			<?php if($block2['title']): ?><h4><strong><?php echo $block2['title']; ?></strong></h4><?php endif; ?>
+			<?php if($block2['content']): ?><p><?php echo $block2['content']; ?></p><?php endif; ?>
+			<?php if($block2['image']): ?><img src="<?php echo $block2['image']['url']; ?>" alt="<?php echo $block2['image']['alt']; ?>" /><?php endif; ?>
 			<div class="arrow"><svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 					<g transform="translate(-9, -9)" fill="currentColor" fill-rule="nonzero">
@@ -31,10 +31,10 @@
 				</g>
 			</svg></div>
 		</a>
-		<a href="" class="grid-item">
-			<h4><strong>retargeting</strong></h4>
-			<p>Monitors campaign progress, visualises audience engagement and ticketing demand in real-time</p>
-			<img src="<?php echo get_template_directory_uri(); ?>/src/images/cost-estimation.png" alt="" />
+		<a href="<?php if($block3['link']): ?><?php echo $block3['link']['url']; ?><?php endif; ?>" class="grid-item">
+			<?php if($block3['title']): ?><h4><strong><?php echo $block3['title']; ?></strong></h4><?php endif; ?>
+			<?php if($block3['content']): ?><p><?php echo $block3['content']; ?></p><?php endif; ?>
+			<?php if($block3['image']): ?><img src="<?php echo $block3['image']['url']; ?>" alt="<?php echo $block3['image']['alt']; ?>" /><?php endif; ?>
 			<div class="arrow"><svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 					<g transform="translate(-9, -9)" fill="currentColor" fill-rule="nonzero">
@@ -43,10 +43,10 @@
 				</g>
 			</svg></div>
 		</a>
-		<a href="" class="grid-item">
-			<h4><strong>forecast</strong></h4>
-			<p>Powered by machine learning, past historical data from the global film market</p>
-			<img src="<?php echo get_template_directory_uri(); ?>/src/images/cost-estimation.png" alt="" />
+		<a href="<?php if($block4['link']): ?><?php echo $block4['link']['url']; ?><?php endif; ?>" class="grid-item">
+			<?php if($block4['title']): ?><h4><strong><?php echo $block4['title']; ?></strong></h4><?php endif; ?>
+			<?php if($block4['content']): ?><p><?php echo $block4['content']; ?></p><?php endif; ?>
+			<?php if($block4['image']): ?><img src="<?php echo $block4['image']['url']; ?>" alt="<?php echo $block4['image']['alt']; ?>" /><?php endif; ?>
 			<div class="arrow"><svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 					<g transform="translate(-9, -9)" fill="currentColor" fill-rule="nonzero">

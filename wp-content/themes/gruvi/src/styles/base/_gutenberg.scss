@@ -12,8 +12,8 @@
 .edit-post-visual-editor__post-title-wrapper {
 	border-bottom: 1px solid var(--color-grey);
 	// max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 .edit-post-visual-editor__post-title-wrapper h1 {
 	font-size: 48px;
@@ -32,7 +32,7 @@
 
 /* Post title width */
 .editor-post-title__block.wp-block {
-	max-width: var(--container-global);
+	max-width: var(--container-width);
 
 	/* Post title styling */
 	.editor-post-title__input {
@@ -41,13 +41,23 @@
 
 /* Main column width */
 .wp-block {
-    max-width: var(--container-global);
-
+	max-width: var(--container-width);
+	margin-left: 0;
+	margin-right: 0;
+	.container {
+		padding: 0 2rem;
+	}
 	/* Wide column width */
 	&[data-align="wide"],
 	&[data-align="full"] {
 		max-width: none;
 	}
+}
+.wp-block-post-content > .wp-block-heading,
+.wp-block-post-content > p,
+.wp-block-post-content .wp-block-buttons {
+	max-width: var(--container-width);
+	padding: 0 2rem;
 }
 
 // Undo blockquote styles
@@ -96,8 +106,15 @@ div[data-type="core/button"] div[data-block] {
     margin-left: auto;
     margin-right: auto;
 }
+.editor-styles-wrapper .grid-item .arrow {
+	display: none !important;
+}
 .editor-styles-wrapper .has-large-font-size {
 	font-size: var(--font-size-lead) !important;
+}
+.spacer {
+	border: 1px dotted rgba(255, 255, 255, 1);
+	background-color: rgba(255, 255, 255, 0.05);
 }
 h2, .heading-2, h2.has-medium-font-size { font-size: var(--font-size-h2) !important;}
 h2.has-large-font-size {

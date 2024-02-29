@@ -3,7 +3,7 @@
 	"title": "Grid block",
 	"description": "A grid with links",
 	"category": "gruvi",
-	"icon": "dashicons-layout",
+	"icon": "layout",
 	"keywords": ["links, grid"],
 	"acf": {
 		"mode": "preview",

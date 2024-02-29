@@ -6,6 +6,7 @@
             "key": "field_5e7cf772feba9",
             "label": "Twitter",
             "name": "twitter",
+            "aria-label": "",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -22,6 +23,7 @@
             "key": "field_5e7cf772feba8",
             "label": "Facebook",
             "name": "facebook",
+            "aria-label": "",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -38,6 +40,7 @@
             "key": "field_5e7cf747feba6",
             "label": "Instagram",
             "name": "instagram",
+            "aria-label": "",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -54,6 +57,24 @@
             "key": "field_5e7cf764feba7",
             "label": "YouTube",
             "name": "youtube",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_65e04a9f8bc29",
+            "label": "Linkedin",
+            "name": "linkedin",
+            "aria-label": "",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -84,5 +105,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Add social links",
-    "modified": 1615322175
+    "show_in_rest": 0,
+    "modified": 1709198000
 }
