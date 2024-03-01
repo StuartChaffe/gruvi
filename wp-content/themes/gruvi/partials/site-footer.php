@@ -1,4 +1,4 @@
-<footer class="site-footer fade">
+<footer class="site-footer margin">
 	<a href="<?php echo home_url(); ?>" class="site-footer__logo">
 		<img src="<?php echo get_template_directory_uri(); ?>/src/images/logo.svg" alt="Gruvi logo" />
 	</a>

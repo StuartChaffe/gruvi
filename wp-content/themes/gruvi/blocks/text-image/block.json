@@ -1,0 +1,13 @@
+{
+	"name": "acf/text-image",
+	"title": "Text with image",
+	"description": "A text with image block",
+	"category": "gruvi",
+	"icon": "forms",
+	"keywords": ["image, text"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "text-image.php"
+	},
+	"align": "full"
+}

@@ -6,9 +6,13 @@
 
 	&__logo {
 		display: block;
-		width: 400px;
-		height: 60px;
+		width: 250px;
+		height: 37px;
 		margin-bottom: var(--spacing-s);
+		@include mq(medium) {
+			width: 400px;
+			height: 60px;
+		}
 	}
 	&__nav {
 		margin-bottom: var(--spacing);
@@ -23,13 +27,20 @@
 			padding: 0;
 			height: 100%;
 			align-items: center;
+			flex-direction: column;
+			@include mq(medium) {
+				flex-direction: row;
+			}
 			.current_page_item > a {
 				font-weight: var(--font-weight-black);
 			}
 			li {
 				position: relative;
 				display: flex;
-				margin: 0 0.5rem;
+				margin: 0.3rem 0.5rem;
+				@include mq(medium) {
+					margin: 0 0.5rem;
+				}
 
 				a {
 					position: relative;
@@ -76,11 +87,20 @@
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	padding: var(--spacing-s) 0;
+	padding: var(--spacing-s);
 }
 
 .site-footer p {
 	color: white;
 	margin: 0;
 	margin-bottom: var(--spacing);
+	@include mq(medium) {
+		flex-direction: row;
+	}
+	br {
+		display: none;
+		@include mq(medium) {
+			display: block;
+		}
+	}
 }

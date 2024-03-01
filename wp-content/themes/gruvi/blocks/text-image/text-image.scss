@@ -1,0 +1,133 @@
+.text-image {
+	position: relative;
+	&__inner {
+		// @extend .container;
+		display: flex;
+		flex-direction: column;
+		@include mq(medium) {
+			flex-direction: row;
+		}
+	}
+	&__item {
+		background-color: red;
+	}
+	&__text {
+		width: 80%;
+		margin: 0 auto;
+		@include mq(medium) {
+			width: 40%;
+		}
+		a {
+			text-decoration: underline;
+		}
+	}
+	&__image {
+		img {
+			width: 100%;
+			height: auto;
+		}
+		&--left {
+			.text-image__text {
+				order: 1;
+				@include mq(medium) {
+					order: 2;
+				}
+			}
+		}
+		&--right {
+			.text-image__image {
+				@include mq(medium) {
+					order: 2;
+				}
+			}
+			.text-image__text {
+				order: 1;
+			}
+		}
+	}
+}
+
+
+// .text-image {
+// 	position: relative;
+// 	&__inner {
+// 		@extend .container;
+// 		display: flex;
+// 		flex-direction: column;
+// 		@include mq(medium) {
+// 			flex-direction: row;
+// 		}
+// 	}
+// 	&__item {
+// 		// background-color: red;
+// 	}
+// 	&__text {
+// 		width: 80%;
+// 		margin: 0 auto;
+// 		@include mq(medium) {
+// 			width: 40%;
+// 		}
+// 		a {
+// 			text-decoration: underline;
+// 		}
+// 	}
+// 	.hidden-img {
+// 		display: none;
+// 		@include mq(medium) {
+// 			display: block;
+// 		}
+// 		img {
+// 			opacity: 0;
+// 		}
+// 	}
+// 	&__image {
+// 		width: 80%;
+// 		margin: 0 auto;
+
+// 		// img {
+// 		// 	width: 100%;
+// 		// 	height: auto;
+// 		// }
+// 		@include mq(medium) {
+// 			width: 50vw;
+// 		}
+// 		&--left {
+// 			.text-image__text {
+// 				order: 1;
+// 				@include mq(medium) {
+// 					order: 2;
+// 				}
+// 			}
+// 			.main-img {
+// 				width: 100%;
+// 				@include mq(medium) {
+// 					position: absolute;
+// 					top: 0;
+// 					left: 0;
+// 					width: 50%;
+// 					max-height: 100%;
+// 				}
+// 			}
+// 		}
+// 		&--right {
+// 			.text-image__image {
+// 				.main-img {
+// 					width: 100%;
+// 					@include mq(medium) {
+// 						position: absolute;
+// 						top: 0;
+// 						right: 0;
+// 						width: 55%;
+// 						max-height: 100%;
+// 					}
+// 				}
+// 				@include mq(medium) {
+// 					order: 2;
+// 				}
+// 			}
+// 			.text-image__text {
+// 				order: 1;
+// 			}
+// 		}
+// 	}
+// }

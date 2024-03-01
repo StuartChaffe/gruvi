@@ -5,7 +5,7 @@
 <main class="main" id="content">
 	<?php the_content(); ?>
 
-	<section class="container animate">
+	<section class="container animate hide">
 		<h1><strong>Our technology</strong></h1>
 		<h2>Entertainment<br /> with <strong>data-driven</strong><br /> Audience insights</h2>
 

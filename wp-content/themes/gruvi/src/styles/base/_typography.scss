@@ -1,4 +1,4 @@
-p {
+p, p.has-small-font-medium {
 	@extend .animate !optional;
 	margin-top: 0;
 	// margin-bottom: var(--spacing-s);
@@ -77,7 +77,7 @@ h5 {
 	color: var(--heading-color);
 
 	strong {
-		font-weight: var(--font-weight-bold);
+		font-weight: var(--font-weight-black);
 	}
 }
 

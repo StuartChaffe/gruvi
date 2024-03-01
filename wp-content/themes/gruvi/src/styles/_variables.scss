@@ -65,12 +65,12 @@
 
 	--border-radius: 16px;
 
-	--spacing-xxl: 175px;
-	--spacing-xl: 128px;
-	--spacing-l: 96px;
-	--spacing: 64px;
-	--spacing-s: 32px;
-	--spacing-xs: 16px;
+	--spacing-xxl: calc(175px / 2);
+	--spacing-xl: calc(128px / 2);
+	--spacing-l: calc(96px / 2);
+	--spacing: calc(64px / 2);
+	--spacing-s: calc(32px / 2);
+	--spacing-xs: calc(16px / 2);
 
 	--content-width: 782px;
 	--container-width: 1250px;
@@ -86,15 +86,24 @@
 	// --font-size-h5: calc(1.2rem + 0.2vw);
 
 	--font-size: calc(1rem + 0.3vw);
+	--wp--preset--font-size--medium: var(--font-size);
 	--font-size-lead: calc(1.25rem + 0.3vw);
+	--wp--preset--font-size--large: var(--font-size-lead);
 	--font-size-small: 14px;
+	--wp--preset--font-size--small: var(--font-size-small);
 	--font-size-h1: calc(1rem + 5vw);
 	--font-size-h2: calc(1rem + 2.5vw);
 	--font-size-h3: calc(1rem + 1.5vw);
 	--font-size-h4: 22px;
 	--font-size-h5: 1rem;
 
-	// @include mq(medium) {
+	@include mq(medium) {
+		--spacing-xxl: 175px;
+		--spacing-xl: 128px;
+		--spacing-l: 96px;
+		--spacing: 64px;
+		--spacing-s: 32px;
+		--spacing-xs: 16px;
 	// 	--font-size: calc(1rem + 0.3vw);
 	// 	--font-size-lead: calc(1.25rem + 0.3vw);
 	// 	--font-size-small: 14px;
@@ -103,7 +112,7 @@
 	// 	--font-size-h3: calc(1rem + 1.5vw);
 	// 	--font-size-h4: 22px;
 	// 	--font-size-h5: 1rem;
-	// }
+	}
 
 	@include mq(large) {
 		--font-size-small: 16px;

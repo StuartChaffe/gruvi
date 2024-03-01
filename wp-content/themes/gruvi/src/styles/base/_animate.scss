@@ -38,6 +38,22 @@
 	}
 }
 
+.margin {
+	@include mq(medium) {
+		opacity: 0;
+		// transform: translateY(150px);
+		transition: all 1s ease-in-out;
+		padding: var(--spacing-l);
+	}
+}
+.margin--visible {
+	@include mq(medium) {
+		opacity: 1;
+		// transform: translateY(0);
+		padding: 0;
+	}
+}
+
 .across {
 	@include mq(medium) {
 		opacity: 0;

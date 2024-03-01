@@ -1,0 +1,26 @@
+{
+	"version": 2,
+	"settings": {
+		"typography": {
+			"fontWeight": false,
+			"fontStyle": false,
+			"fontSizes": [
+				{
+					"slug": "small",
+					"size": "var(--font-size-small)",
+					"name": "Small"
+				},
+				{
+					"slug": "medium",
+					"size": "var(--font-size)",
+					"name": "Medium"
+				},
+				{
+					"slug": "large",
+					"size": "var(--font-size-lead)",
+					"name": "large"
+				}
+			]
+		}
+	}
+}
