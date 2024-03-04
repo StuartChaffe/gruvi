@@ -93,7 +93,7 @@ function origin_remove_default_blocks($allowed_blocks){
 	unset($registered_blocks['core/site-title']);
 	unset($registered_blocks['core/social-link']);
 	unset($registered_blocks['core/social-links']);
-	// unset($registered_blocks['core/spacer']);
+	unset($registered_blocks['core/spacer']);
 	// unset($registered_blocks['core/table']);
 	unset($registered_blocks['core/tag-cloud']);
 	unset($registered_blocks['core/text-columns']);

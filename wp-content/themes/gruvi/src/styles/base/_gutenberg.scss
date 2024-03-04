@@ -123,3 +123,14 @@ h2.has-large-font-size {
 h2.has-small-font-size {
 	font-size: var(--font-size-h3) !important;
 }
+
+.slider {
+	// display: flex;
+	.slider-item {
+		display: none !important;
+		opacity: 1 !important;
+		&:first-child {
+			display: flex !important;
+		}
+	}
+}

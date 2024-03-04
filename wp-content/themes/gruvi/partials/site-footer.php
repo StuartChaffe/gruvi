@@ -9,7 +9,7 @@
 
 		<p class="heading-3 caps u-center"><strong>Partner with us<br /> to solve<br /> your audience challenges</strong></p>
 
-		<a href="" class="btn btn--large">Connect with us</a>
+		<a href="" class="btn btn--large btn--border caps">Connect with us</a>
 
 		<ul class="social-links">
 		<?php if(get_field('twitter', 'options')): ?>

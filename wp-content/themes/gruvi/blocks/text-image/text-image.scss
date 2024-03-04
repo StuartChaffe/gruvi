@@ -1,7 +1,7 @@
-.text-image {
+.text-image1 {
 	position: relative;
 	&__inner {
-		// @extend .container;
+		@extend .container;
 		display: flex;
 		flex-direction: column;
 		@include mq(medium) {
@@ -47,87 +47,108 @@
 	}
 }
 
+.text-image {
+	display: flex;
+	position: relative;
+	&::after {
+		display: none;
+		content: '';
+		position: absolute;
+		width: 100vw;
+		height: 1px;
+		background-color: rgba(255, 255, 255, 0.5);
+		bottom: -20px;
+		left: 0;
+		z-index: -1;
+		@include mq(medium) {
+			// display: block;
+			bottom: var(--spacing-l);
+		}
+	}
+	&__inner {
+		@extend .container;
+		display: flex;
+		flex-direction: column;
+		padding: 0 var(--spacing-l);
+		@include mq(medium) {
+			flex-direction: row;
+			padding: 0 var(--spacing-s);
+		}
+	}
 
-// .text-image {
-// 	position: relative;
-// 	&__inner {
-// 		@extend .container;
-// 		display: flex;
-// 		flex-direction: column;
-// 		@include mq(medium) {
-// 			flex-direction: row;
-// 		}
-// 	}
-// 	&__item {
-// 		// background-color: red;
-// 	}
-// 	&__text {
-// 		width: 80%;
-// 		margin: 0 auto;
-// 		@include mq(medium) {
-// 			width: 40%;
-// 		}
-// 		a {
-// 			text-decoration: underline;
-// 		}
-// 	}
-// 	.hidden-img {
-// 		display: none;
-// 		@include mq(medium) {
-// 			display: block;
-// 		}
-// 		img {
-// 			opacity: 0;
-// 		}
-// 	}
-// 	&__image {
-// 		width: 80%;
-// 		margin: 0 auto;
+	&__text {
+		width: 100%;
+		@include mq(medium) {
+			width: 40%;
+			display: block;
+		}
+	}
+	&__image {
+		display: none;
+		position: absolute;
+		right: 0;
+		width: 55%;
+		@include mq(medium) {
+			display: block;
+		}
+		img {
+			width: 100%;
+		}
+		&--left {
+			.text-image__image {
+				left: 0;
+			}
+			.text-image__hiddenimage {
+				order: 1;
+				@include mq(medium) {
+					order: 1;
+				}
+			}
+			.text-image__text {
+				order: 2;
+				@include mq(medium) {
+					order: 2;
+					text-align: right;
+					.tags {
+						justify-content: flex-end;
+					}
+				}
+			}
+		}
+		&--right {
+			.text-image__hiddenimage {
+				order: 1;
+				@include mq(medium) {
+					order: 1;
+				}
+			}
+			.text-image__image {
+			}
+			.text-image__text {
+				order: 2;
+				@include mq(medium) {
+					order: 1;
+				}
+			}
+		}
+	}
+	&__hiddenimage {
+		width: 100%;
+		img {
+			opacity: 1;
+			visibility: visible;
+		}
+		@include mq(medium) {
+			width: 60%;
+			img {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+	}
+}
 
-// 		// img {
-// 		// 	width: 100%;
-// 		// 	height: auto;
-// 		// }
-// 		@include mq(medium) {
-// 			width: 50vw;
-// 		}
-// 		&--left {
-// 			.text-image__text {
-// 				order: 1;
-// 				@include mq(medium) {
-// 					order: 2;
-// 				}
-// 			}
-// 			.main-img {
-// 				width: 100%;
-// 				@include mq(medium) {
-// 					position: absolute;
-// 					top: 0;
-// 					left: 0;
-// 					width: 50%;
-// 					max-height: 100%;
-// 				}
-// 			}
-// 		}
-// 		&--right {
-// 			.text-image__image {
-// 				.main-img {
-// 					width: 100%;
-// 					@include mq(medium) {
-// 						position: absolute;
-// 						top: 0;
-// 						right: 0;
-// 						width: 55%;
-// 						max-height: 100%;
-// 					}
-// 				}
-// 				@include mq(medium) {
-// 					order: 2;
-// 				}
-// 			}
-// 			.text-image__text {
-// 				order: 1;
-// 			}
-// 		}
-// 	}
-// }
+.text-image + .wp-block-separator {
+	margin-top: -80px;
+	z-index: -1;
+}

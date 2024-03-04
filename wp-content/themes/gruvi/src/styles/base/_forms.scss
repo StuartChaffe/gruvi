@@ -7,13 +7,17 @@ input[type="url"],
 input[type="password"],
 textarea,
 select {
-	height: 38px;
-	padding: 6px 10px;
-	background-color: #fff;
+	width: 50%;
+	padding: 12px 10px 8px 10px;
+	background-color: transparent;
+	color: white;
 	border: 1px solid #D1D1D1;
-	border-radius: 4px;
+	border-radius: 0;
 	box-shadow: none;
 	box-sizing: border-box;
+}
+.hs-form-field {
+	margin-bottom: 1.5rem;
 }
 
 input[type="email"],
@@ -43,7 +47,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-	border: 1px solid var(--color-grey-dark);
+	// border: white;
 	outline: 0;
 }
 
@@ -62,8 +66,8 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
 	display: block;
-	padding: 1em;
-	margin: .5em 0;
+	// padding: 1em;
+	// margin: .5em 0;
 	background: var(--color-primary);
 	color: #fff;
 	border-radius: var(--border-radius);
@@ -83,9 +87,9 @@ input[type="button"]:hover,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-	background: var(--color-grey);
+	background: white;
 	text-decoration: none;
-	color: #fff;
+	color: var(--color-primary);
 }
 
  .required {

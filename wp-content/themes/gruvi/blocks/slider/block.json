@@ -1,0 +1,13 @@
+{
+	"name": "acf/slider",
+	"title": "Slider",
+	"description": "A slider",
+	"category": "gruvi",
+	"icon": "slides",
+	"keywords": ["slider, team, carousel"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "slider.php"
+	},
+	"align": "full"
+}

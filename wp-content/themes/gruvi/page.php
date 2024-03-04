@@ -5,6 +5,21 @@
 <main class="main" id="content">
 	<?php the_content(); ?>
 
+	<div class="container animate">
+		<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+		<script data-hubspot-rendered="true">
+		hbspt.forms.create({
+		region: "na1",
+		portalId: "3477242",
+		formId: "38bfc69c-00c8-4cae-ada2-912a5d50597b",
+		onFormSubmit: function($form) {
+			console.log($form);
+			window.location.href = "https://www.gruvi.tv/thank-you/"
+		}
+		});
+		</script>
+	</div>
+
 	<section class="container animate hide">
 		<h1><strong>Our technology</strong></h1>
 		<h2>Entertainment<br /> with <strong>data-driven</strong><br /> Audience insights</h2>

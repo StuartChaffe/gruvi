@@ -7,3 +7,4 @@ import './components/menu';
 import './components/animate';
 import './components/toggle';
 import './components/accordion';
+import './components/slider';

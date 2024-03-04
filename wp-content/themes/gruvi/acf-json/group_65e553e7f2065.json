@@ -1,11 +1,11 @@
 {
-    "key": "group_61990b2dc2731",
-    "title": "Accordion",
+    "key": "group_65e553e7f2065",
+    "title": "Slider",
     "fields": [
         {
-            "key": "field_61990b2dc3e94",
-            "label": "Accordion Items",
-            "name": "accordion_items",
+            "key": "field_65e553e84024b",
+            "label": "Slide",
+            "name": "slide",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -18,18 +18,18 @@
             },
             "layout": "block",
             "pagination": 0,
-            "min": 1,
+            "min": 0,
             "max": 0,
             "collapsed": "",
-            "button_label": "Add an accordion",
+            "button_label": "Add Row",
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_61990b2dc473b",
-                    "label": "Title",
-                    "name": "accordion_title",
+                    "key": "field_65e553fa4024c",
+                    "label": "Image",
+                    "name": "image",
                     "aria-label": "",
-                    "type": "wysiwyg",
+                    "type": "image",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -38,17 +38,22 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "basic",
-                    "media_upload": 0,
-                    "delay": 0,
-                    "parent_repeater": "field_61990b2dc3e94"
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_65e553e84024b"
                 },
                 {
-                    "key": "field_65e535fd69c63",
-                    "label": "Sub title",
-                    "name": "accordion_subtitle",
+                    "key": "field_65e554044024d",
+                    "label": "Title",
+                    "name": "title",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -64,28 +69,7 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_61990b2dc3e94"
-                },
-                {
-                    "key": "field_61990b2dc4756",
-                    "label": "Body",
-                    "name": "accordion_body",
-                    "aria-label": "",
-                    "type": "wysiwyg",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "basic",
-                    "media_upload": 0,
-                    "delay": 0,
-                    "parent_repeater": "field_61990b2dc3e94"
+                    "parent_repeater": "field_65e553e84024b"
                 }
             ]
         }
@@ -95,7 +79,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/accordion"
+                "value": "acf\/slider"
             }
         ]
     ],
@@ -108,5 +92,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1709520480
+    "modified": 1709528347
 }
