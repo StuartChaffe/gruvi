@@ -1,0 +1,150 @@
+.tabbed {
+	// background-color: red;
+	&.has-tabs {
+		.tabbed--buttons {
+			opacity: 1;
+			height: auto;
+			visibility: visible;
+		}
+
+		.tabbed--item {
+			min-height: 0;
+
+			&::before {
+				display: none;
+			}
+
+			&.is-active {
+				.tabbed--item__inner {
+					opacity: 1;
+					transition: opacity 400ms ease-in-out;
+				}
+			}
+			.tabbed--item__inner {
+				opacity: 0;
+				transition: opacity 400ms ease-in-out;
+			}
+		}
+	}
+}
+
+.tabbed--buttons {
+	display: flex;
+	justify-content: center;
+	margin-bottom: var(--spacing);
+	// opacity: 0;
+	// height: 0;
+	// visibility: hidden;
+	// display: flex;
+	// // justify-content: space-between;
+	// flex-flow: wrap;
+	// margin: 0;
+	// list-style: none;
+	// padding: 0;
+
+	.tab {
+		background-color: transparent;
+		border: 0;
+		color: white;
+		text-transform: uppercase;
+		font-weight: var(--font-weight-normal);
+		opacity: 0.5;
+		margin: 0 var(--spacing-s);
+		&:hover,
+		&:focus {
+			opacity: 1;
+			cursor: pointer;
+		}
+		&.is-active {
+			opacity: 1;
+			font-weight: var(--font-weight-black);
+			// border-top: 3px solid var(--color-tertiary);
+			// color: var(--color-tertiary);
+		}
+	}
+
+	.tab {
+	}
+}
+
+.tabbed--item {
+	// background-color: green;
+	position: relative;
+	overflow: hidden;
+
+	// &:hover,
+	// &:focus {
+	// 	outline: none;
+	// 	&::before {
+	// 		background:  var(--color-secondary);
+	// 		color: white;
+	// 	}
+	// }
+
+	&.is-active {
+		.tabbed--item__inner {
+			margin-top: 0;
+			height: auto;
+			opacity: 1;
+			transition: margin 400ms ease-out -100ms;
+		}
+	}
+
+	&__content {
+		position: absolute;
+		z-index: 99;
+	}
+}
+
+.tabbed--item-container {
+	overflow: hidden;
+	// margin-bottom: 1px;
+}
+
+.tabbed--item__inner {
+	@extend .container;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	margin-top: -100%;
+	height: 0;
+	opacity: 0;
+	transition: margin 500ms ease-in;
+	@include mq(medium) {
+		flex-direction: row;
+	}
+}
+
+
+.tab-slider {
+	padding-bottom: 50px;
+	.slick-arrow {
+		top: calc(var(--spacing) + 600px);
+	}
+	&-item {
+		flex-direction: column;
+		align-items: center;
+	}
+	&__image {
+		height: 600px;
+		margin-bottom: var(--spacing-xl);
+		img {
+			height: 100%;
+		}
+	}
+
+	&__grid {
+		display: grid;
+		width: 100%;
+		grid-template-columns: 1fr 1fr;
+
+		&-item {
+			display: flex;
+			flex-direction: column;
+			.icon {
+				width: 100px;
+				height: 100px;
+			}
+		}
+	}
+}

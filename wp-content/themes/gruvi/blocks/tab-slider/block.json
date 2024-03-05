@@ -1,0 +1,13 @@
+{
+	"name": "acf/tab-slider",
+	"title": "Tabbed slider",
+	"description": "Tabs with slider",
+	"category": "gruvi",
+	"icon": "embed-photo",
+	"keywords": ["slider, tabs, tabbed"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "tab-slider.php"
+	},
+	"align": "full"
+}

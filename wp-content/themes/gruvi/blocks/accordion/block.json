@@ -2,9 +2,9 @@
     "name": "acf/accordion",
     "title": "Accordion",
     "description": "A simple accordion",
-    "category": "formatting",
-    "icon": "admin-comments",
-    "keywords": ["faq"],
+    "category": "gruvi",
+    "icon": "menu",
+    "keywords": ["accordion"],
     "acf": {
         "mode": "preview",
         "renderTemplate": "accordion.php"
