@@ -28,9 +28,21 @@ add_filter( 'post_thumbnail_html', 'origin_remove_thumbnail_dimensions', 10, 3 )
 
 
 /**
+ * Allow SVG
+ */
+function add_file_types_to_uploads($file_types){
+	$new_filetypes = array();
+	$new_filetypes['svg'] = 'image/svg+xml';
+	$file_types = array_merge($file_types, $new_filetypes );
+	return $file_types;
+}
+add_filter('upload_mimes', 'add_file_types_to_uploads');
+
+
+/**
  * Responsive image helper function
  * Based on https://www.awesomeacf.com/responsive-images-wordpress-acf/
- * Usage: <img class="my_class" <?php echo get_acf_responsive_image_path(get_field( 'image_1' ),'banner','1000px'); ?>  alt="text" /> 
+ * Usage: <img class="my_class" <?php echo get_acf_responsive_image_path(get_field( 'image_1' ),'banner','1000px'); ?>  alt="text" />
  */
  function get_acf_responsive_image_path($image_id,$image_size,$max_width) {
 	// check the image ID is not blank

@@ -134,6 +134,7 @@
 	}
 
 	&__grid {
+		max-width: var(--content-width);
 		display: grid;
 		width: 100%;
 		grid-template-columns: 1fr 1fr;
@@ -141,9 +142,18 @@
 		&-item {
 			display: flex;
 			flex-direction: column;
-			.icon {
+			align-items: center;
+			text-align: center;
+			padding: var(--spacing-xs) var(--spacing-s);
+			.icon, img {
 				width: 100px;
 				height: 100px;
+				margin-bottom: var(--spacing-xs);
+			}
+			p {
+				opacity: 1;
+				transform: translateY(0px);
+				margin-bottom: var(--spacing-xs);
 			}
 		}
 	}
