@@ -24,7 +24,7 @@ jQuery(document).ready(function($) {
 	});
 	$(".tab-slider").slick({
 		// settings: "unslick",
-		speed: 200,
+		speed: 600,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		autoplay: false,

@@ -8,23 +8,29 @@ if (!isset($args)) {
 }
 $defaults = [
 	'tabs' => get_field('tabs'),
+	'bkg__image' => get_field('bkg__image'),
 ];
 $args = wp_parse_args($args, $defaults);
 if($args['tabs']):
 ?>
 <section class="tabbed animate">
+<?php if($args['bkg__image']): ?>
+<img decoding="async" class="block__image" loading="lazy" src="<?php echo $args['bkg__image']['url']; ?>" alt="<?php echo $args['bkg__image']['alt']; ?>" />
+<?php endif; ?>
 	<div class="tabbed--buttons" role="tablist" aria-label="TabCordion">
 	<?php foreach($args['tabs'] as $item): $counter++; ?>
-		<button class="tab<?php if ($counter == 1): ?> is-active<?php endif; ?>" role="tab" aria-selected="<?php if ($counter == 1): ?>true<?php else: ?>false<?php endif; ?>" aria-controls="tab<?php echo $counter; ?>" id="tab<?php echo $counter; ?>" tabindex="-1"><?php echo $item['button']; ?></button>
+		<button class="tab<?php if ($counter == 1): ?> is-active<?php endif; ?>" role="tab" aria-selected="<?php if ($counter == 1): ?>true<?php else: ?>false<?php endif; ?>" aria-controls="tab<?php echo $counter; ?>" id="tab<?php echo $counter; ?>" <?php if ($counter !== 1): ?>tabindex="-<?php echo $counter; ?>"<?php endif; ?>><?php echo $item['button']; ?></button>
 	<?php endforeach; ?>
 	</div>
 
+	<?php $counter = 0; ?>
 	<?php if( have_rows('tabs') ): ?>
 		<?php while ( have_rows('tabs') ) : the_row();
 			$title = get_sub_field('title');
+			$button = get_sub_field('button');
 			$counter++;
 		?>
-		<div id="tab<?php echo $counter; ?>" class="tabbed--item is-active" data-title="<?php echo $item['button']; ?>" tabindex="0" role="tabpanel" aria-labelledby="tab<?php echo $counter; ?>">
+		<div id="tab<?php echo $counter; ?>" class="tabbed--item<?php if ($counter == 1): ?> is-active<?php endif; ?>" data-title="<?php echo $button; ?>" tabindex="-<?php echo $counter; ?>" role="tabpanel" aria-labelledby="tab<?php echo $counter; ?>">
 			<div class="tabbed--item__inner">
 				<div class="tabbed--item__content">
 					<?php echo $title; ?>
@@ -66,8 +72,6 @@ if($args['tabs']):
 		<?php endwhile; ?>
 	<?php endif; ?>
 </section>
-
-
 <?php endif; ?>
 
 <section class="tabbed animate hide">

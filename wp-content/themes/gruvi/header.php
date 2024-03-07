@@ -12,11 +12,13 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
+<?php $bkg = get_field('bkg__image'); ?>
 
 <?php wp_head(); ?>
 <?php get_template_part('partials/global', 'analytics'); ?>
 </head>
 <body <?php body_class(); ?>>
+<!-- <body <?php body_class(); ?> <?php if($bkg): ?>style="background-image: url(<?php echo $bkg['url']; ?>)"<?php endif; ?>> -->
 
 <?php get_template_part('partials/global', 'browser-notice'); ?>
 
