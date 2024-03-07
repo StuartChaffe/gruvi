@@ -1,0 +1,25 @@
+.mega-title {
+	@extend .container;
+	max-width: var(--container-global);
+	position: relative;
+
+	&__image {
+		z-index: 9;
+		max-width: 30%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		@include mq(medium) {
+			max-width: 20%;
+		}
+		@include mq(large) {
+			max-width: 50%;
+		}
+	}
+}
+
+
+.main > .mega-title {
+	margin-top: var(--spacing-xxl);
+}

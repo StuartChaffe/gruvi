@@ -1,0 +1,13 @@
+{
+	"name": "acf/content-block",
+	"title": "Content block",
+	"description": "A content block",
+	"category": "gruvi",
+	"icon": "editor-alignleft",
+	"keywords": ["content, paragraph, heading"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "content-block.php"
+	},
+	"align": "full"
+}

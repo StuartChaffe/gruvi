@@ -1,0 +1,8 @@
+.content-block {
+	width: 100%;
+	clear: both;
+
+	&__inner {
+		@extend .container;
+	}
+}

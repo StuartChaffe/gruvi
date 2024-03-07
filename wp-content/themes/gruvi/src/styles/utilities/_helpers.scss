@@ -33,6 +33,24 @@ img.aligncenter     { display: block; margin-left: auto; margin-right: auto; }
 .alignleft          { float: left; }
 .aligncenter        { display: block; margin-left: auto; margin-right: auto; }
 
+.width {
+	&--full {
+		@include mq(medium) {
+			width: 100%;
+		}
+	}
+	&--wide {
+		@include mq(medium) {
+			width: 80%;
+		}
+	}
+	&--half {
+		@include mq(medium) {
+			width: 50%;
+		}
+	}
+}
+
 // Screen reader
 .sr-only {
 	position: absolute;

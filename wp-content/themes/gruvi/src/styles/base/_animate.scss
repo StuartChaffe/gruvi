@@ -47,6 +47,7 @@
 }
 .margin--visible {
 	@include mq(medium) {
+		transform: translateY(0px);
 		opacity: 1;
 		// transform: translateY(0);
 		padding: 0;

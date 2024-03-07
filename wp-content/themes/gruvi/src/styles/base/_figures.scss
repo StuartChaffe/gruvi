@@ -1,5 +1,10 @@
 figure {
 	margin: 0;
+	@extend .animate !optional;
+
+	img {
+		width: 100%;
+	}
 }
 
 figcaption {

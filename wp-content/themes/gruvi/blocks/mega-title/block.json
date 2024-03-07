@@ -1,0 +1,13 @@
+{
+	"name": "acf/mega-title",
+	"title": "Mega title",
+	"description": "Mega title, best used as work header",
+	"category": "gruvi",
+	"icon": "menu-alt3",
+	"keywords": ["title, mega, work"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "mega-title.php"
+	},
+	"align": "full"
+}

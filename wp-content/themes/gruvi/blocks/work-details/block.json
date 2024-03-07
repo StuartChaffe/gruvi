@@ -1,0 +1,13 @@
+{
+	"name": "acf/work-details",
+	"title": "Work details",
+	"description": "Show work details",
+	"category": "gruvi",
+	"icon": "info-outline",
+	"keywords": ["work, case study"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "work-details.php"
+	},
+	"align": "full"
+}

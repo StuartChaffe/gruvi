@@ -14,7 +14,7 @@ $defaults = [
 $args = wp_parse_args($args, $defaults);
 
 ?>
-<div class="slider">
+<div class="slider animate">
 <?php foreach($args['slide'] as $item): ?>
 	<div class="slider-item">
 		<img loading="lazy" src="<?php echo $item['image']['url']; ?>" alt="<?php echo $item['image']['alt']; ?>" />

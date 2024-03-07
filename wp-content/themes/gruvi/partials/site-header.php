@@ -1,4 +1,11 @@
-<header class="site-header ">
+<div class="mobile-menu" id="mobile-menu">
+	<nav class="mobile-menu__nav">
+		<?php wp_nav_menu( array('theme_location' => 'primary') ); ?>
+	</nav>
+	<a href="" class="btn hidedesktop">let's talk</a>
+</div>
+
+<header class="site-header">
 	<div class="site-header__inner">
 		<a href="<?php echo home_url(); ?>" class="site-header__logo">
 			<img src="<?php echo get_template_directory_uri(); ?>/src/images/logo.svg" alt="Gruvi logo" />
@@ -17,10 +24,3 @@
 	</div>
 
 </header>
-
-<div class="mobile-menu" id="mobile-menu">
-	<nav class="mobile-menu__nav">
-		<?php wp_nav_menu( array('theme_location' => 'primary') ); ?>
-	</nav>
-	<a href="" class="btn hidedesktop">let's talk</a>
-</div>
