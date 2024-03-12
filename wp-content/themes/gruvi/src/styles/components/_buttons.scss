@@ -1,7 +1,8 @@
 .btn,
 .wp-block-button__link,
 .wp-block-button__link:visited,
-.is-style-outline a {
+.is-style-outline a,
+input[type=submit] {
 	display: inline-block;
 	border-radius: 100px;
 	padding: 0.2rem 0.75rem 0 0.75rem;

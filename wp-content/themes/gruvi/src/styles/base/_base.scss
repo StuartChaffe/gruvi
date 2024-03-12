@@ -30,17 +30,17 @@ html {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  font-family: var(--body-family);
-  font-size: var(--font-size);
-  line-height: var(--line-height);
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	font-family: var(--body-family);
+	font-size: var(--font-size);
+	line-height: var(--line-height);
 	font-weight: var(--font-weight-light);
-  text-rendering: optimizeSpeed;
-  color: var(--color-text-base);
-  background-color: var(--body-background-color);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeSpeed;
+	color: var(--color-text-base);
+	background-color: var(--body-background-color);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 
 	background-attachment: fixed;
 	background-size: 100%;

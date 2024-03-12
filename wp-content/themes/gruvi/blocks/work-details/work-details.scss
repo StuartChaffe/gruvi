@@ -3,14 +3,17 @@
 	background-color: red;
 	&__inner {
 		@extend .container;
-		// display: flex;
-		// flex-direction: column;
-		// @include mq(medium) {
-		// 	flex-direction: row;
-		// }
 		p {
 			opacity: 1;
 			transform: translateY(0px);
+		}
+	}
+	&__cover {
+		width: 40%;
+		// min-width: 200px;
+		@include mq(medium) {
+			width: 250px;
+			min-width: 250px;
 		}
 	}
 	&__specs {
@@ -19,8 +22,10 @@
 		display: flex;
 		justify-content: space-between;
 		flex-direction: column;
+		margin-bottom: var(--spacing-s);
 		@include mq(medium) {
 			flex-direction: row;
+			margin-bottom: var(--spacing);
 		}
 
 		div {
@@ -30,6 +35,84 @@
 			p {
 				text-transform: uppercase;
 			}
+		}
+	}
+	&__info {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		// flex-direction: column;
+		@include mq(medium) {
+			// flex-direction: row;
+			flex-wrap: nowrap;
+		}
+	}
+	&__desc {
+		width: 60%;
+		padding: 0 var(--spacing-xs);
+		font-size: 18px;
+		@include mq(medium) {
+			width: 40%;
+		}
+	}
+	&__team {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin-top: var(--spacing);
+		margin-bottom: var(--spacing-xl);
+		// width: 33%;
+
+		@include mq(medium) {
+			margin-top: 0;
+			width: auto;
+			padding: 0 var(--spacing-s);
+		}
+	}
+	&__metrics {
+		position: relative;
+		overflow: hidden;
+		margin: var(--spacing-s) 0 0 0;
+		padding: 0;
+		list-style: none;
+		text-align: center;
+		li {
+			border: 1px solid rgba(255, 255, 255, 0.5);
+			padding: 0.75rem 0.5rem 0.5rem 0.5rem;
+			&:nth-child(3) { margin-left: 1rem; margin-right: 1rem; }
+			&:nth-child(5) { margin-left: 2rem; margin-right: 2rem; }
+		}
+		.angle {
+			border: 0 !important;
+			padding: 0;
+			position: relative;
+			overflow: hidden;
+			height: 25px;
+			&-inner {
+				position: absolute;
+				margin: 0 auto;
+				background-color: rgba(255, 255, 255, 0.5);
+				width: 210px;
+				height: 50px;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%) skewY(-20deg);
+			}
+		}
+	}
+	&__buttons {
+		display: flex;
+		margin-top: auto;
+		margin-top: var(--spacing-s);
+		.btn--circle {
+			transform: translateY(75%);
+			z-index: 2;
+		}
+		.btn--circle-large {
+			transform: translateX(-25%);
+			z-index: 1;
 		}
 	}
 }

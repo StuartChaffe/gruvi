@@ -51,6 +51,17 @@ img.aligncenter     { display: block; margin-left: auto; margin-right: auto; }
 	}
 }
 
+.fix-image {
+	// position: absolute;
+	// margin-top: -50%;
+	// z-index: -1;
+	img {
+		position: absolute;
+		top: 0;
+		transform: translateY(-50%);
+	}
+}
+
 // Screen reader
 .sr-only {
 	position: absolute;

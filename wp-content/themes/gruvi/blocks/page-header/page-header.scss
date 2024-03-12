@@ -8,8 +8,28 @@
 	background-position: center center;
 	background-size: cover;
 	z-index: 1;
+	background-color: var(--body-background-color);
 	@include mq(medium) {
 		min-height: 100vh;
+	}
+	&__content-bottom {
+		align-items: normal;
+		.container {
+			// height: 100%;
+			.acf-innerblocks-container {
+				.wp-block-heading,
+				p {
+					margin-top: auto;
+				}
+				p {
+					margin-bottom: 80px;
+					transition-delay: .2s;
+				}
+				.wp-block-heading {
+					padding-top: 80px;
+				}
+			}
+		}
 	}
 	.container {
 		// height: 100%;

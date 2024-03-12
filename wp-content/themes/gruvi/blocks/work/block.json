@@ -1,0 +1,13 @@
+{
+	"name": "acf/work",
+	"title": "All work",
+	"description": "Display all work",
+	"category": "gruvi",
+	"icon": "video-alt2",
+	"keywords": ["work"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "work.php"
+	},
+	"align": "full"
+}

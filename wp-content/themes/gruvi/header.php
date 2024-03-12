@@ -17,8 +17,8 @@
 <?php wp_head(); ?>
 <?php get_template_part('partials/global', 'analytics'); ?>
 </head>
-<body <?php body_class(); ?>>
-<!-- <body <?php body_class(); ?> <?php if($bkg): ?>style="background-image: url(<?php echo $bkg['url']; ?>)"<?php endif; ?>> -->
+<!-- <body <?php body_class(); ?>> -->
+<body <?php body_class(); ?> <?php if($bkg): ?>style="background-image: url(<?php echo $bkg['url']; ?>)"<?php endif; ?>>
 
 <?php get_template_part('partials/global', 'browser-notice'); ?>
 

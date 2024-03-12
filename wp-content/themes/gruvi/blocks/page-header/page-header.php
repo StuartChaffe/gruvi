@@ -6,8 +6,9 @@ $image = get_field('image');
 $mobile_image = get_field('mobile_image');
 $video = get_field('video');
 $poster = get_field('poster');
+$place = get_field('content_bottom');
 ?>
-<section class="page-header fade <?php echo $type; ?>" <?php if($image): ?>style="background-image: url(<?php echo $image['url'] ?>);"<?php endif; ?>>
+<section class="page-header fade <?php echo $type; ?> <?php if(true == $place): ?> page-header__content-bottom<?php endif; ?>" <?php if($image): ?>style="background-image: url(<?php echo $image['url'] ?>);"<?php endif; ?>>
 	<?php if($mobile_image): ?>
 		<img loading="lazy" class="page-header__image--small" src="<?php echo $mobile_image['url']; ?>" alt="<?php echo $mobile_image['alt']; ?>" />
 	<?php endif; ?>
