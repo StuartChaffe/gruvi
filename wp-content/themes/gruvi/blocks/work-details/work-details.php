@@ -21,7 +21,7 @@ $args = wp_parse_args($args, $defaults);
 			<div><p><?php echo $args['specs']['type']; ?></p></div>
 			<div><p><?php echo $args['specs']['country']; ?></p> <img loading="lazy" src="<?php echo $args['specs']['country_flag']['url']; ?>" alt="<?php echo $args['specs']['country_flag']['alt']; ?>" /></div>
 		</div>
-		<div class="work-details__info">
+		<div class="work-details__info animate">
 			<div class="work-details__cover">
 				<img loading="lazy" src="<?php echo $args['cover']['url']; ?>" alt="<?php echo $args['cover']['alt']; ?>" />
 			</div>

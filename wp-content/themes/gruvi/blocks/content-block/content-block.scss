@@ -4,5 +4,10 @@
 
 	&__inner {
 		@extend .container;
+		br {
+			@include mq($until: medium) {
+				display: none;
+			}
+		}
 	}
 }

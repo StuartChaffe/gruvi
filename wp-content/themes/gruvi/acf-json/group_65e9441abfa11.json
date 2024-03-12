@@ -394,9 +394,9 @@
                         "id": ""
                     },
                     "choices": {
-                        "Small": "Small",
-                        "Large": "Large",
-                        "Full": "Full"
+                        "work-item__stats--small": "Small",
+                        "work-item__stats--large": "Large",
+                        "work-item__stats--full": "Full"
                     },
                     "default_value": false,
                     "return_format": "value",
@@ -485,5 +485,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710208889
+    "modified": 1710219773
 }

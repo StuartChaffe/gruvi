@@ -1,9 +1,8 @@
 .work-details {
 	width: 100%;
-	background-color: red;
 	&__inner {
 		@extend .container;
-		p {
+		p, h4 {
 			opacity: 1;
 			transform: translateY(0px);
 		}
@@ -44,15 +43,20 @@
 		// flex-direction: column;
 		@include mq(medium) {
 			// flex-direction: row;
-			flex-wrap: nowrap;
+			flex-wrap: wrap;
 		}
 	}
 	&__desc {
 		width: 60%;
-		padding: 0 var(--spacing-xs);
+		padding: 0 0 0 var(--spacing);
 		font-size: 18px;
 		@include mq(medium) {
 			width: 40%;
+			padding: 0 var(--spacing-s);
+		}
+		@include mq(large) {
+			width: 40%;
+			padding: 0 var(--spacing);
 		}
 	}
 	&__team {
@@ -79,17 +83,24 @@
 		list-style: none;
 		text-align: center;
 		li {
+			font-size: var(--font-size-small);
 			border: 1px solid rgba(255, 255, 255, 0.5);
 			padding: 0.75rem 0.5rem 0.5rem 0.5rem;
 			&:nth-child(3) { margin-left: 1rem; margin-right: 1rem; }
 			&:nth-child(5) { margin-left: 2rem; margin-right: 2rem; }
+
+			p {
+				font-size: var(--font-size-small);
+				opacity: 1;
+				transform: translateY(0px);
+			}
 		}
 		.angle {
 			border: 0 !important;
 			padding: 0;
 			position: relative;
 			overflow: hidden;
-			height: 25px;
+			height: 20px;
 			&-inner {
 				position: absolute;
 				margin: 0 auto;
