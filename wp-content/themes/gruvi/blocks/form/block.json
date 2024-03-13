@@ -1,0 +1,13 @@
+{
+	"name": "acf/form",
+	"title": "Hubspot form",
+	"description": "A hubspot form",
+	"category": "gruvi",
+	"icon": "format-status",
+	"keywords": ["form"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "form.php"
+	},
+	"align": "full"
+}

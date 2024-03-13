@@ -6,7 +6,7 @@
 		'order' => 'DESC',
 	));
 ?>
-<?php if ($posts->have_posts()) { ?>
+<?php if ($posts->have_posts()): ?>
 <section class="work">
 	<?php while($posts->have_posts()) : $posts->the_post();
 		$specs = get_field('specs', get_the_ID());
@@ -43,4 +43,4 @@
 	<?php endwhile; wp_reset_query(); ?>
 </section>
 
-<?php } ?>
+<?php endif; ?>

@@ -1,0 +1,13 @@
+{
+	"name": "acf/featured-work-work",
+	"title": "Featured work",
+	"description": "Display featured work",
+	"category": "gruvi",
+	"icon": "video-alt2",
+	"keywords": ["featured work, featured"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "featured-work.php"
+	},
+	"align": "full"
+}

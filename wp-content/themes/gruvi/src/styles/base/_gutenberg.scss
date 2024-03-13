@@ -106,7 +106,8 @@ div[data-type="core/button"] div[data-block] {
     margin-left: auto;
     margin-right: auto;
 }
-.editor-styles-wrapper .grid-item .arrow {
+.editor-styles-wrapper .grid-item .arrow,
+.editor-styles-wrapper .featured-item .arrow {
 	display: none !important;
 }
 .editor-styles-wrapper .has-large-font-size {

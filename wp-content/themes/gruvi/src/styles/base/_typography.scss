@@ -3,6 +3,8 @@ p, p.has-small-font-medium {
 	margin-top: 0;
 	// margin-bottom: var(--spacing-s);
 	font-size: var(--font-size);
+	position: relative;
+	z-index: 1;
 	&:last-of-type {
 		margin-bottom: 0;
 	}
