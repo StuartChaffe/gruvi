@@ -1,3 +1,8 @@
+<?php
+$counter = 0;
+$content = get_field('content', 'options');
+$button = get_field('button', 'options');
+?>
 <footer class="site-footer margin">
 	<a href="<?php echo home_url(); ?>" class="site-footer__logo">
 		<img src="<?php echo get_template_directory_uri(); ?>/src/images/logo.svg" alt="Gruvi logo" />
@@ -7,9 +12,9 @@
 			<?php wp_nav_menu( array('theme_location' => 'footer', 'container' => false, ) ); ?>
 		</nav>
 
-		<p class="heading-3 caps u-center"><strong>Partner with us<br /> to solve<br /> your audience challenges</strong></p>
+		<p class="heading-3 caps u-center"><strong><?php echo $content; ?></strong></p>
 
-		<a href="" class="btn btn--large btn--border caps">Connect with us</a>
+		<a href="<?php echo $button['url']; ?>" class="btn btn--large btn--border caps"><?php echo $button['title']; ?></a>
 
 		<ul class="social-links">
 		<?php if(get_field('twitter', 'options')): ?>
