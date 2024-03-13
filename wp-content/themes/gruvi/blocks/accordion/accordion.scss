@@ -57,6 +57,9 @@
 		}
 	}
 	&.is-active {
+		.accordion__subtitle {
+			display: none;
+		}
 		.accordion__hover {
 			display: none;
 		}
@@ -189,3 +192,23 @@
 // 	transition: all 2s ease-out;
 // }
 
+.accordion__team {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding-left: var(--spacing-s);
+	@include mq(medium) {
+		padding-left: var(--spacing-xl);
+	}
+	&-item {
+		width: calc(100% / 3);
+		margin: 0 var(--spacing-xs);
+		img {
+			margin-bottom: var(--spacing-xs);
+			border: 1px solid rgba(255, 255, 255, 0.5);
+		}
+		&__location {
+			margin-top: -5px;
+		}
+	}
+}
