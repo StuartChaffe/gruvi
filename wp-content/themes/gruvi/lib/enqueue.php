@@ -10,6 +10,9 @@ function origin_scripts() {
 		wp_register_script( 'slick', get_template_directory_uri().'/assets/js/slick.js', array( 'jquery' ), null, true );
 		wp_enqueue_script( 'slick' );
 
+		wp_register_script( 'tabs', get_template_directory_uri().'/assets/js/js-tabs.js', array( 'jquery' ), null, true );
+		wp_enqueue_script( 'tabs' );
+
 		wp_register_script( 'scripts', get_template_directory_uri().'/assets/js/scripts.js', array( 'jquery' ), null, true );
 		wp_enqueue_script( 'scripts' );
 	}

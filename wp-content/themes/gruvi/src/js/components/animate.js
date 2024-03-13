@@ -38,7 +38,7 @@ jQuery(document).ready(function( $ ) {
 	$(document).scroll(function(){
 		ImageAnimation();
 	});
-	$(this).parent().prev().get(0).play();
+	// $(this).parent().prev().get(0).play();
 	// $('.play-video-btn').click(function () {
 	// 	$(this).parent().prev().get(0).play();
 	// 	$(this).addClass('is-hidden');
