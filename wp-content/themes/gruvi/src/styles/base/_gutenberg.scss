@@ -140,3 +140,12 @@ hr,
 .wp-block-separator {
 	height: 10px;
 }
+.form-admin {
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	padding: var(--spacing-l);
+}
+.fix-image {
+	// background-color: red;
+	min-height: 100px;
+	z-index: 0 !important;
+}
