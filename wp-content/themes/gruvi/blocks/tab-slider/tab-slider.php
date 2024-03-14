@@ -15,7 +15,9 @@ if($args['tabs']):
 ?>
 
 <div class="tabbed animate" id="tabs">
-
+	<?php if($args['bkg__image']): ?>
+	<img decoding="async" class="block__image" loading="lazy" src="<?php echo $args['bkg__image']['url']; ?>" alt="<?php echo $args['bkg__image']['alt']; ?>" />
+	<?php endif; ?>
 	<div class="tabbed--buttons animate">
 	<?php foreach($args['tabs'] as $item): $counter++; ?>
 		<a href="#" class="tabbed--button"><?php echo $item['button']; ?></a>
