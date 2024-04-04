@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_65f10fe7b648a",
-            "label": "Footer content",
+            "label": "Page content",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -20,8 +20,24 @@
             "endpoint": 0
         },
         {
+            "key": "field_65f37bb5d8f5e",
+            "label": "Header button",
+            "name": "header_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
             "key": "field_65f11023b648b",
-            "label": "Content",
+            "label": "Footer content",
             "name": "content",
             "aria-label": "",
             "type": "textarea",
@@ -41,7 +57,7 @@
         },
         {
             "key": "field_65f1102db648c",
-            "label": "Button",
+            "label": "Footer button",
             "name": "button",
             "aria-label": "",
             "type": "link",
@@ -298,5 +314,5 @@
     "active": true,
     "description": "Set theme options",
     "show_in_rest": 0,
-    "modified": 1710311940
+    "modified": 1710455803
 }

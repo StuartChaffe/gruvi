@@ -19,8 +19,8 @@
 		<nav class="site-header__nav">
 			<?php wp_nav_menu( array('theme_location' => 'primary', 'container' => false, ) ); ?>
 		</nav>
-
-		<a href="" class="btn hidemobile">let's talk</a>
+		<?php $hbutton = get_field('header_button', 'options'); ?>
+		<?php if($hbutton): ?><a href="<?php echo $hbutton['url']; ?>" class="btn hidemobile"><?php echo $hbutton['title']; ?></a><?php endif; ?>
 	</div>
 
 </header>

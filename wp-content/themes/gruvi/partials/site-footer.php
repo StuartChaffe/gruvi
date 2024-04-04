@@ -12,9 +12,9 @@ $button = get_field('button', 'options');
 			<?php wp_nav_menu( array('theme_location' => 'footer', 'container' => false, ) ); ?>
 		</nav>
 
-		<p class="heading-3 caps u-center"><strong><?php echo $content; ?></strong></p>
+		<?php if($content): ?><p class="heading-3 caps u-center"><strong><?php echo $content; ?></strong></p><?php endif; ?>
 
-		<a href="<?php echo $button['url']; ?>" class="btn btn--large btn--border caps"><?php echo $button['title']; ?></a>
+		<?php if($button['url']): ?><a href="<?php echo $button['url']; ?>" class="btn btn--large btn--border caps"><?php echo $button['title']; ?></a><?php endif; ?>
 
 		<ul class="social-links">
 		<?php if(get_field('twitter', 'options')): ?>
