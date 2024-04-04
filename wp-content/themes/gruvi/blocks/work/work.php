@@ -36,7 +36,7 @@
 			</div>
 			<?php endif; ?>
 		</div>
-			<a href="<?php esc_url( the_permalink() ); ?>" title="Article: <?php the_title(); ?>" class="btn animate">learn more</a>
+			<a href="<?php the_permalink(); ?>" title="Article: <?php the_title(); ?>" class="btn animate">learn more</a>
 
 	</div>
 	<hr class="wp-block-separator has-alpha-channel-opacity across--visible">
