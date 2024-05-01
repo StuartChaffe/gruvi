@@ -143,8 +143,11 @@
 	// }
 
 	&__content {
-		position: absolute;
+		// position: absolute;
 		z-index: 99;
+		@include mq(medium) {
+			position: absolute;
+		}
 	}
 }
 
@@ -168,15 +171,23 @@
 .tab-slider {
 	padding-bottom: 50px;
 	.slick-arrow {
-		top: calc(var(--spacing) + 600px);
+		@include mq(medium) {
+			top: calc(var(--spacing) + 600px);
+		}
 	}
 	&-item {
+		padding: 0 1rem;
 		flex-direction: column;
 		align-items: center;
+		@include mq(medium) {
+			padding: 0;
+		}
 	}
 	&__image {
-		height: 600px;
-		margin-bottom: var(--spacing-xl);
+		@include mq(medium) {
+			height: 600px;
+			margin-bottom: var(--spacing-xl);
+		}
 		img {
 			height: 100%;
 		}

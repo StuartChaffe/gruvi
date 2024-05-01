@@ -1,13 +1,17 @@
 <?php get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
-
 	<article id="content">
-		<h2><?php the_title(); ?></h2>
-		<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time>
-		<?php the_content(); ?>
-	</article>
+		<div class="post-content">
+			<p class="small"><a href="/blog">Blog</a> > <?php the_title(); ?></p>
+			<h1 class="wp-block-heading has-small-font-size heading-4"><strong><?php the_title(); ?></strong></h1>
+			Updated on <?php the_time( 'd/m/Y' ); ?>
+			<br />
+			Author: <?php the_author(); ?>
 
+			<?php the_content(); ?>
+		</div>
+	</article>
 <?php endwhile; ?>
 
 <?php get_footer(); ?>

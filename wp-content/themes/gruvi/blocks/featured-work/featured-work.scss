@@ -72,8 +72,12 @@
 			transition: all .2s ease-in !important;
 			padding-right: 60px;
 			h4 {
+				font-size: var(--font-size-h5);
 				opacity: 1;
 				transform: translateY(0px);
+				@include mq(medium) {
+					font-size: var(--font-size-h4);
+				}
 			}
 
 			&--top {
@@ -83,6 +87,9 @@
 			&--bottom {
 				bottom: calc(var(--spacing-s) - 10px);
 				left: var(--spacing-s);
+				@include mq(medium) {
+					bottom: calc(var(--spacing-s) - 10px);
+				}
 			}
 		}
 
