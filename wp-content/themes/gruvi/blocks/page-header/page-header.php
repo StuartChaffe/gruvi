@@ -19,7 +19,7 @@ $place = get_field('content_bottom');
 		<?php endif; ?>
 		<?php if ( $video ): ?>
 		<div class="page-header__video">
-			<video muted preload loop autoplay <?php if ( $poster ): ?>poster="<?php echo $poster['url']; ?>"<?php endif; ?>>
+			<video muted preload loop autoplay playsinline <?php if ( $poster ): ?>poster="<?php echo $poster['url']; ?>"<?php endif; ?>>
 				<source src="<?php echo $video['url']; ?>" type="video/mp4">
 				<p>Your user agent does not support the HTML5 Video element.</p>
 			</video>

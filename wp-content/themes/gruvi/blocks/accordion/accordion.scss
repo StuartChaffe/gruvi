@@ -180,7 +180,8 @@
 	}
 
 	&.is-open {
-		display: block;
+		display: flex;
+		flex-direction: column;
 		// opacity: 1;
 		// transition: all 2s ease-out;
 	}
@@ -195,14 +196,22 @@
 .accordion__team {
 	width: 100%;
 	display: flex;
+	// flex: 1;
+	flex-wrap: wrap;
 	justify-content: center;
 	padding-left: var(--spacing-s);
 	@include mq(medium) {
 		padding-left: var(--spacing-xl);
 	}
 	&-item {
-		width: calc(100% / 3);
-		margin: 0 var(--spacing-xs);
+		// width: calc(100% / 3);
+		flex: 0 50%;
+		padding: 0 var(--spacing-xs);
+		margin-bottom: var(--spacing-s);
+		@include mq(medium) {
+			flex: 0 33.3333333333%;
+			padding-left: var(--spacing-xl);
+		}
 		img {
 			margin-bottom: var(--spacing-xs);
 			border: 1px solid rgba(255, 255, 255, 0.5);

@@ -105,11 +105,15 @@
 				position: absolute;
 				margin: 0 auto;
 				background-color: rgba(255, 255, 255, 0.5);
-				width: 210px;
-				height: 50px;
+				width: 130px;
+				height: 27px;
 				left: 50%;
 				top: 50%;
 				transform: translate(-50%, -50%) skewY(-20deg);
+				@include mq(medium) {
+					width: 210px;
+					height: 50px;
+				}
 			}
 		}
 	}

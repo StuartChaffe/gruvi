@@ -75,3 +75,12 @@ add_action('after_setup_theme', function() {
 	remove_filter('render_block', 'wp_restore_group_inner_container');
 	remove_filter('render_block', 'wp_render_layout_support_flag');
 });
+
+
+/**
+ * Change excerpt length
+ */
+function mytheme_custom_excerpt_length( $length ) {
+	return 18;
+}
+add_filter( 'excerpt_length', 'mytheme_custom_excerpt_length', 999 );

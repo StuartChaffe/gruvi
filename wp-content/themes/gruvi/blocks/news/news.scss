@@ -1,0 +1,23 @@
+.news-grid {
+	@extend .container;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	gap: var(--spacing);
+	margin-top: var(--spacing);
+	@include mq(medium) {
+		grid-template-columns: repeat(2, 1fr);
+		margin-top: var(--spacing);
+		margin-bottom: var(--spacing-l);
+	}
+	@include mq(large) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	&--more {
+		margin-bottom: var(--spacing-l);
+	}
+
+	figure {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

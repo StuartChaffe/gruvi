@@ -9,8 +9,9 @@ function origin_image_defaults() {
 	update_option('image_default_size', 'large' );
 
 	// Set image sizes
-	add_image_size( 'Banner', 600, 450, true );
+	add_image_size( 'Banner', 900, 9999, true );
 	add_image_size( 'Square', 400, 400, true );
+	add_image_size( 'Post', 360, 200, true );
 }
 add_action( 'after_setup_theme', 'origin_image_defaults' );
 

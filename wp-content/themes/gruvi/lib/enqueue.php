@@ -7,6 +7,12 @@ function origin_scripts() {
 	if ( !is_admin() ) {
 		wp_enqueue_style( 'styles', mix( 'assets/css/styles.css' ), array(), null );
 
+		wp_register_script( 'mixitup', get_template_directory_uri().'/assets/js/mixitup.min.js', array( 'jquery' ), null, true );
+		wp_enqueue_script( 'mixitup' );
+
+		wp_register_script( 'mixituppagination', get_template_directory_uri().'/assets/js/mixitup-pagination.min.js', array( 'jquery' ), null, true );
+		wp_enqueue_script( 'mixituppagination' );
+
 		wp_register_script( 'slick', get_template_directory_uri().'/assets/js/slick.js', array( 'jquery' ), null, true );
 		wp_enqueue_script( 'slick' );
 

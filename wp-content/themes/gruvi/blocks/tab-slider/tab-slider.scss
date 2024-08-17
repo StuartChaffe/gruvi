@@ -189,7 +189,10 @@
 			margin-bottom: var(--spacing-xl);
 		}
 		img {
-			height: 100%;
+			// height: 100%;
+			@include mq(medium) {
+				height: 100%;
+			}
 		}
 	}
 

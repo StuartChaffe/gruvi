@@ -50,6 +50,10 @@
 .text-image {
 	display: flex;
 	position: relative;
+	margin-bottom: var(--spacing-l);
+	@include mq(medium) {
+		margin-bottom: 0;
+	}
 	&::after {
 		display: none;
 		content: '';
@@ -69,7 +73,7 @@
 		@extend .container;
 		display: flex;
 		flex-direction: column;
-		padding: 0 var(--spacing-l);
+		padding: 0 var(--spacing-s);
 		@include mq(medium) {
 			flex-direction: row;
 			padding: 0 var(--spacing-s);
@@ -95,6 +99,14 @@
 			width: 100%;
 		}
 		&--left {
+			.text-image__inner {
+				@include mq($until: medium) {
+					padding-left: 0;
+					.text-image__text {
+						padding-left: var(--spacing-s);
+					}
+				}
+			}
 			.text-image__image {
 				left: 0;
 			}
@@ -116,6 +128,14 @@
 			}
 		}
 		&--right {
+			.text-image__inner {
+				@include mq($until: medium) {
+					padding-right: 0;
+					.text-image__text {
+						padding-right: var(--spacing-s);
+					}
+				}
+			}
 			.text-image__hiddenimage {
 				order: 1;
 				@include mq(medium) {

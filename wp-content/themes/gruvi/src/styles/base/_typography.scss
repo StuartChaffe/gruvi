@@ -72,6 +72,7 @@ h4,
 h5 {
 	@extend .animate !optional;
 	margin: 0;
+	margin-bottom: 1rem !important;
 	text-transform: uppercase;
 	font-family: var(--body-family);
 	line-height: var(--line-height-headings);
@@ -156,10 +157,13 @@ hr,
 	display: flex;
 	margin-top: var(--spacing-s);
 	.tag {
-		font-size: 18px;
+		font-size: 16px;
 		border: 1px solid white;
 		margin-right: 0.5rem;
-		padding: 0.2rem 0.3rem 0 0.3rem;
+		padding: 0.2rem 0.3rem;
+		@include mq(medium) {
+			font-size: 18px;
+		}
 		&:last-of-type {
 			margin-right: 0;
 		}
